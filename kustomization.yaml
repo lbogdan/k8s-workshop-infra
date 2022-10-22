@@ -9,3 +9,4 @@ resources:
 - rook-ceph-helm.yaml
 - rook-ceph-cluster.yaml
 - argocd-helm.yaml
+- calico.yaml
