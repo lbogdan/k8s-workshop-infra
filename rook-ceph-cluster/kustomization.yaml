@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - configmap.yaml
-- cluter.yaml
+- cluster.yaml
 - cephblockpool.yaml
 - storageclass.yaml
