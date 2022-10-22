@@ -7,3 +7,4 @@ resources:
 - cert-manager-helm.yaml
 - metrics-server-helm.yaml
 - rook-ceph-helm.yaml
+- rook-ceph-cluster.yaml
