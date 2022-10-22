@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rook-ceph
+  namespace: argocd
+spec:
+  destination:
+    namespace: rook-ceph
+    server: https://kubernetes.default.svc
+  project: infra
+  source:
+    chart: rook-ceph
+    helm:
+      values: |-
+        nodeSelector:
+          node-role.kubernetes.io/storage: ""
+        tolerations:
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+        csi:
+          provisionerTolerations:
+            - key: node-role.kubernetes.io/master
+              operator: Exists
+              effect: NoSchedule
+          provisionerNodeAffinity: node-role.kubernetes.io/storage=
+          pluginTolerations:
+            - key: node-role.kubernetes.io/master
+              operator: Exists
+              effect: NoSchedule
+        admissionController:
+          tolerations:
+            - key: node-role.kubernetes.io/master
+              operator: Exists
+              effect: NoSchedule
+          nodeAffinity: node-role.kubernetes.io/storage=
+    repoURL: https://charts.rook.io/release
+    targetRevision: 1.9.9

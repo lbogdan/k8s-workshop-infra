@@ -6,3 +6,4 @@ resources:
 - ingress-nginx-helm.yaml
 - cert-manager-helm.yaml
 - metrics-server-helm.yaml
+- rook-ceph-helm.yaml
