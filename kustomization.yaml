@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - sealed-secrets-helm.yaml
 - ingress-nginx-helm.yaml
+- cert-manager-helm.yaml
