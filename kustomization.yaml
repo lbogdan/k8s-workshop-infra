@@ -10,3 +10,4 @@ resources:
 - rook-ceph-cluster.yaml
 - argocd-helm.yaml
 - calico.yaml
+- kubelet-rubber-stamp.yaml
