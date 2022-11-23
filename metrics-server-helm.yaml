@@ -17,4 +17,4 @@ spec:
         extraArgs:
           - --kubelet-preferred-address-types=InternalIP
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 6.1.0
+    targetRevision: 6.2.3
