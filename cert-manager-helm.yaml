@@ -19,7 +19,7 @@ spec:
         prometheus:
           enabled: false
     repoURL: https://charts.jetstack.io
-    targetRevision: 1.9.1
+    targetRevision: 1.10.1
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
