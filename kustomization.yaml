@@ -11,3 +11,4 @@ resources:
 - argocd-helm.yaml
 - calico.yaml
 - kubelet-rubber-stamp.yaml
+- cert-manager-clusterissuer.yaml
