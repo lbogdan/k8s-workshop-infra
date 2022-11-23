@@ -12,12 +12,6 @@ spec:
     chart: rook-ceph
     helm:
       values: |-
-        nodeSelector:
-          node-role.kubernetes.io/storage: ""
-        tolerations:
-        - key: node-role.kubernetes.io/master
-          operator: Exists
-          effect: NoSchedule
         csi:
           provisionerTolerations:
             - key: node-role.kubernetes.io/master
