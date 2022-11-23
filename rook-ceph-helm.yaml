@@ -36,3 +36,6 @@ spec:
           nodeAffinity: node-role.kubernetes.io/storage=
     repoURL: https://charts.rook.io/release
     targetRevision: 1.9.9
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
