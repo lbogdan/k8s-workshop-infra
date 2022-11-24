@@ -18,7 +18,7 @@ spec:
           publishService:
             enabled: false
           extraArgs:
-            publish-status-address: 138.201.92.128
+            publish-status-address: 142.132.169.177
             update-status: ""
           kind: DaemonSet
           tolerations:
